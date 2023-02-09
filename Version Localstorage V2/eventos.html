@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Event Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Events manager</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active currentTab" href="eventos.html">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="historial.html">Historial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="nuevo-evento.html">Nuevo evento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="mensajes.html">Mensajes</a>
+          </li>
+        </ul>
+        <a id="nombre-usuario" class="navbar-brand" href="index.html"></a>
+        <button type="button" id="cierre-sesion" class="btn btn-primary" style="color: white;">Cerrar Sesión</button>
+      </nav>
+      <div id="div-ordenar">
+        <label for="ordenar">Ordenar por: </label>
+        <select name="ordenar" id="ordenar">
+          <option value="nombre">Alfabético(Nombre)</option>
+          <option value="descripcion">Alfabético(Descripción)</option>
+          <option value="fecha">Fecha</option>
+          <option value="precio_asc">Precio Ascendiente</option>
+          <option value="precio_desc">Precio Descendente</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="dl-pdf">Descargar eventos en PDF</button>
+      </div>
+        
+      <div class="card-columns" id="div_eventos">
+        
+      </div>
+      <dialog id="ventana-eliminar">
+        <p>¿Está seguro que desea eleminar este evento?</p>
+        <button type="button" class="btn btn-primary" id="ok">Afirmar</button>
+        <button type="button" class="btn btn-primary" id="cancel">Cancelar</button>
+      </dialog>
+      <dialog id="ventana-modificar">
+        <div class="container">
+          <h1>Modificar Evento</h1>
+          <form action="#" class="mt-4" id="newEvent">
+            <div class="form-group">
+              <label for="id">ID Evento</label>
+              <input type="text" class="form-control formulario" id="id">
+              <span class="error" id="error_id"></span>
+             </div>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control formulario" id="nombre">
+              <span class="error" id="error_nombre"></span>
+             </div>
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" class="form-control formulario" id="fecha">
+              <span class="error" id="error_fecha"></span>
+              </div>
+            <div class="form-group">
+              <label for="descripcion">Descripción</label>
+              <input type="text" class="form-control formulario" id="descripcion">
+              <span class="error" id="error_descripcion"></span>
+            </div>
+            <div class="form-group">
+              <label for="precio">Precio (en €)</label>
+              <input type="text" class="form-control formulario" id="precio">
+              <span class="error" id="error_precio"></span>
+            </div>
+            <div class="form-group">
+              <label for="imagen">Imagen</label>
+              <input type="file" class="form-control formulario" id="imagen">
+              <img src="" alt="" id="vistaImagenModificada" title="Vista Previa">
+              <span class="error" id="error_imagen"></span>
+            </div>
+           
+            <button type="button" class="btn btn-primary" id="enviar">Enviar</button>
+            <button type="button" class="btn btn-primary" id="cancelar">Cancelar</button>
+          </form>
+        </div>
+      </dialog>
+      <dialog id="ventana-invitar">
+        <p>¿A quien le gustaría invitar a su evento?</p>
+        <label for="usuarios">Usuarios: </label>
+        <select name="usuarios" id="select-usuarios" title="yes" style="color: black;"></select><br><br><br>
+        <button type="button" class="btn btn-primary" id="invitar">Invitar</button>
+        <button type="button" class="btn btn-primary" id="volver">Cancelar</button>
+      </dialog>
+      <script src="scripts/funciones.js"></script>
+      <script src="scripts/eventos.js"></script>
+      <script src="scripts/html2pdf.bundle.js"></script>
+      <script src="scripts/descargaPDF.js"></script>
+</body>
+</html>

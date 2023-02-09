@@ -1,0 +1,1 @@
+Añadida la posibilidad de invitar a eventos a otros usuarios.

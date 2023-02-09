@@ -1,0 +1,295 @@
+.form-control.is-valid ~ .invalid-feedback {
+    display: none;
+}
+
+
+.btn, .btn-primary{
+    border: 1px solid black;
+    margin: 2px;
+    background-color: rgb(121, 59, 59);
+}
+
+#div-login{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#login, #registro{
+    background-color: rgba(255, 255, 255, 0.719);
+    min-width: 250px;
+    width: 20%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px black;
+}
+
+.index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    text-shadow: 0px 0px 1px;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.719);
+}
+
+.index h4{
+    margin-top: 20px;
+}
+
+#newEvent{
+    background-color: rgba(255, 255, 255, 0.479);
+    padding: 10px;
+    padding-bottom: 30vh;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px black;
+}
+
+dialog div #newEvent label{
+    color: black;
+    text-shadow: 0px 0px 0px;
+}
+
+span{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    float: right;
+    margin-top: 5px;
+    text-shadow: 0px 0px 1px red;
+}
+
+#vistaImagen, #vistaImagenModificada{
+    max-width: 30%;
+    max-height: 30%;
+    float: right;
+    margin-top: 20px;
+}
+
+#vistaImagenModificada{
+    float: none;
+}
+
+#ordenar, #div-ordenar{
+    background-color: #7070706e!important;
+    box-shadow: black 2px 2px 15px;
+}
+
+option, select{
+    color: black;
+}
+
+#div_eventos div{
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: black 5px 5px 15px;
+    border-radius: 10px;
+}
+
+#div_eventos div img{
+    max-width: 100%;
+    max-height: 200px;
+    border: 5px solid white;
+    box-shadow: 0px -1px 5px;
+}
+
+#div_eventos div{
+    background-color: rgba(255, 255, 255, 0.719);
+}
+
+#div_eventos{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#div-fecha-precio{
+    height: 10%;
+    width: 100px;
+    display: flex;
+    box-shadow: 0px 0px 0px !important;
+    border-radius: 0px 0px 0px !important;
+    background-color: rgba(0, 0, 0, 0.116) !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+div label, select{
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a:hover, select:hover{
+    cursor: pointer;
+}
+
+.currentTab{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 700px;}
+}
+
+dialog{
+    text-align: center;
+    border: 1px solid black !important;
+}
+
+dialog::backdrop {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+html {
+    height:100%;
+}
+ 
+body {
+    margin:0;
+}
+ 
+.bg {
+    animation:slide 8s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(100, 100, 100) 50%, rgb(22, 22, 22) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+ 
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:10s;
+}
+ 
+.bg3 {
+    animation-duration:12s;
+}
+ 
+@keyframes slide {
+    0% {
+        transform:translateX(-25%);
+    }
+ 
+    100% {
+        transform:translateX(25%);
+    }
+}
+
+.lbl_login{
+    color: black;
+}
+
+button{
+    width: 220px;
+}
+
+#div-cuadro-mensajes{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nuevo-mensaje, #mensajes-entrantes{
+    width: 45vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px black;
+    background-color: rgba(255, 255, 255, 0.375);
+}
+
+.div-editar-mensaje1{
+    width: 80%;
+    height: 170px;
+}
+
+.div-editar-mensaje2{
+    width: 100px;
+}
+
+#mensaje{
+    overflow: scroll;
+    margin-left: 10px;
+    border: 1px solid black;
+    width: 90%;
+}
+
+#mensajes-enviados{
+    width: 100%;
+    height: 53vh;
+}
+
+#div-mensaje{
+    background-color: rgb(201, 199, 199);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    width: 95%;
+    padding: 10px;
+}
+
+#distin-fecha{
+    display: flex;
+    flex-direction: row;
+}
+
+div div div div p{
+    max-width: 300px;
+}
+
+.botton-mensaje{
+    max-width: 80px;
+    max-height: 40px;
+}
+
+.div_botones_invitacion{
+    display: flex;
+    flex-direction: column;
+}

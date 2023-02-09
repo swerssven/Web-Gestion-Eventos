@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes Event Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Events manager</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="eventos.html">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="historial.html">Historial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="nuevo-evento.html">Nuevo evento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active currentTab" href="mensajes.html">Mensajes</a>
+          </li>
+        </ul>
+        <a id="nombre-usuario" class="navbar-brand" href="index.html"></a>
+        <button type="button" id="cierre-sesion" class="btn btn-primary" style="color: white;">Cerrar Sesión</button>
+      </nav>
+      <div id="div-ordenar">
+        <label for="ordenar">Descargar: </label>
+        <button type="button" class="btn btn-primary" id="dl-enviados">Enviados</button>
+        <button type="button" class="btn btn-primary" id="dl-recibidos">Recibidos</button>
+        <button type="button" class="btn btn-primary" id="dl-todos">Todos</button>
+      </div>
+
+      <div id="div-cuadro-mensajes">
+        <div>
+            <label for="nuevo-mensaje">Nuevo mensaje</label><br>
+            <div id="nuevo-mensaje" name="nuevo-mensaje">
+              <div class="div-editar-mensaje1">
+                <label for="mensaje">Mensaje a enviar: </label>
+                <span class="error" id="error_mensaje" style="margin-right: 50px; margin-top: 15px;" ></span>
+                <textarea name="mensaje" id="mensaje" cols="45" rows="4" class="form-control formulario"></textarea>
+              </div>
+              <div class="div-editar-mensaje2">
+                <label for="usuarios">Destinatario: </label><br>
+                <select name="usuarios" id="select-usuarios" title="yes" style="color: black;"></select><br><br>
+                <button type="button" class="btn btn-primary" id="enviar" style="margin: 10px; width: 100px;">Enviar</button>
+              </div>
+              <label for="usuarios">Enviados: </label><br>
+              <div id="mensajes-enviados" name="enviados">
+              </div>
+            </div>
+        </div>
+        <div>
+            <label for="mensajes-entrantes">Mensajes recibidos:</label><br>
+            <div id="mensajes-entrantes" name="mensajes-entrantes"></div>
+        </div>
+        
+      <dialog id="ventana-eliminar">
+        <p>¿Está seguro que desea eleminar este mensaje?</p>
+        <button type="button" class="btn btn-primary" id="ok">Afirmar</button>
+        <button type="button" class="btn btn-primary" id="cancel">Cancelar</button>
+      </dialog>
+    </div>
+    <script src="scripts/funciones.js"></script>
+    <script src="scripts/mensajes.js"></script>
+</body>
+</html>

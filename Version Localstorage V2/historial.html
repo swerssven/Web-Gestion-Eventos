@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Event Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Events manager</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="eventos.html">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active currentTab" href="historial.html">Historial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="nuevo-evento.html">Nuevo evento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="mensajes.html">Mensajes</a>
+          </li>
+        </ul>
+        <a id="nombre-usuario" class="navbar-brand" href="index.html"></a>
+        <button type="button" id="cierre-sesion" class="btn btn-primary" style="color: white;">Cerrar Sesión</button>
+      </nav>
+
+      <div id="div-ordenar">
+        <label for="ordenar">Ordenar por: </label>
+        <select name="ordenar" id="ordenar">
+          <option value="nombre">Alfabético(Nombre)</option>
+          <option value="descripcion">Alfabético(Descripción)</option>
+          <option value="fecha">Fecha</option>
+          <option value="precio_asc">Precio Ascendiente</option>
+          <option value="precio_desc">Precio Descendente</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="dl-pdf">Descargar eventos en PDF</button>
+        </div>
+
+      <div class="card-columns" id="div_eventos">
+        
+      </div>
+      <script src="scripts/funciones.js"></script>
+      <script src="scripts/historial.js"></script>
+      <script src="scripts/html2pdf.bundle.js"></script>
+      <script src="scripts/descargaPDF.js"></script>
+</body>
+</html>

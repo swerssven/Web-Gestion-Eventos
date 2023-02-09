@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Event Manager</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand currentTab" href="index.html">Events manager</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="eventos.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="historial.html">Historial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="nuevo-evento.html">Nuevo evento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="mensajes.html">Mensajes</a>
+        </li>
+      </ul>
+      <a id="nombre-usuario" class="navbar-brand" href="index.html"></a>
+      <button type="button" id="cierre-sesion" class="btn btn-primary" style="color: white;">Cerrar Sesión</button>
+    </nav>
+    
+    <div id="div-login">
+      <div id="div-index" class="mt-4 index">
+        
+        <h4 id="bienvenido"></h4>
+        <img src="images/shutterstock_1212786538.jpg" alt="Imagen no carga">
+        <br>
+        <h5 id="num-eventos"></h5>
+        <br>
+        <h5 id="num-mensajes"></h5>
+      </div>
+      <div id="login">
+        <form action="" class="mt-4">
+          <h2>Events manager</h2>
+          <br>
+          <h5>Login:</h5>
+          <label class="lbl_login" for="usuario-login">Nombre Usuario: </label>
+          <input type="text" class="form-control formulario" name="usuario-login" id="usuario-login">
+          <span class="error_login" id="error_nombre_login"></span><br>
+          <label class="lbl_login" for="password-login">Contraseña: </label>
+          <input type="password" class="form-control formulario" name="password-login" id="password-login">
+          <span class="error_login" id="error_password_login"></span><br>
+          <br>
+          <button type="button" class="btn btn-primary" id="btn_login">Login</button><br>
+          <label class="lbl_login" for="boton-registro">Aún no tienes cuenta?</label><br>
+          <button type="button" class="btn btn-primary" name="boton-registrarse" id="btn_registrarse">Registrarse</button>
+        </form>
+      </div>
+      <div id="registro">
+        <form action="" class="mt-4">
+          <h2>Events manager</h2>
+          <br>
+          <h5>Registro usuario nuevo:</h5>
+          <label class="lbl_login" for="usuario">Nombre Usuario: </label>
+          <input type="text" class="form-control formulario" name="usuario" id="usuario-registro">
+          <span class="error_registro" id="error_nombre_registro"></span><br>
+          <label class="lbl_login" for="password">Contraseña: </label>
+          <input type="password" class="form-control formulario" name="password" id="password-registro">
+          <span class="error_registro" id="error_password_registro"></span><br>
+          <br>
+          <button type="button" class="btn btn-primary" id="btn_registrar">Registrar</button>
+        </form>
+      </div>
+    </div>
+
+  <script src="scripts/funciones.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
